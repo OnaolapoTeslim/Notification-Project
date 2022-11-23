@@ -1,0 +1,116 @@
+
+body {
+    width: 100vw;
+    height: 3000px;
+    box-sizing: border-box;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#notificationbox {
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    place-items: center;
+}
+#h1 {
+    grid-column: 1 / 1;
+}
+#number {
+    width: 30px;
+    height: 30px;
+    background-color: blue;
+    color: white;
+    grid-column: 2 / 2;
+    border-radius: 4px 4px 4px 4px;
+}
+#number h3 {
+    text-align: center;
+    margin-top: 1.5px;
+}
+#photo1, #photo2, #photo3, #photo4, #photo5, #photo6, #photo7 {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px 25px 25px 25px;
+    grid-column: 2 / 2;
+    margin-top: 12px;
+}
+ img {
+    object-fit: cover;
+    border-radius: 25px 25px 25px 25px;
+    width: 50px;
+    height: 50px;
+}
+#red-dot {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 5px 5px 5px 5px;
+}
+#messagesection {
+    display: block;
+    width: 92vw;
+    height: 900px;
+    display: grid;
+    grid-template-columns: 4vw 1fr 4vw;
+    place-items: center;
+    margin: 0 auto;
+    row-gap: 40px;
+}
+#message1, #message2, #message3, #message4, #message5, #message6, #message7 {
+    width: 100%;
+    height: 100px;
+    background-color:  hsl(211, 68%, 94%);
+    grid-column: 2 / 2;
+    display: grid;
+    grid-template-columns: 4vw 5vw 1fr 4vw;
+    column-gap: 2vw;
+   
+}
+#text1, #text2, #text3, #text4, #text5, #text6 {
+    grid-column: 3 / 3;
+    place-items: center;
+}
+#privatemessage {
+    grid-column: 3 / 3;
+    width: 100%;
+    height: 80px;
+    display: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid hsl(211, 68%, 94%);
+    border-radius: 5px 5px 5px 5px;
+}
+#privatemessage:hover {
+    background-color: hsl(211, 68%, 94%);
+}
+#privatemessage p {
+    text-align: center;
+}
+#privatecomment {
+    grid-column: 2 / 4;
+    display: none;
+    border: 1px solid hsl(211, 68%, 94%);
+}
+#privatecomment:hover {
+    background-color: hsl(211, 68%, 94%);
+}
+.Notification:hover {
+    background-color: blue;
+}
+#button:hover {
+    color: blue;
+}
+@media (min-width: 375px) and (max-width: 700px) {
+    #message1, #message2, #message3, #message4, #message5, #message6, #message7 {
+    column-gap: 7vw;
+    } 
+    #privatemessage {
+        height: 200px;
+        padding-left: 0;
+        padding-right: 0;
+    padding-left: 10px;
+    }
+}
